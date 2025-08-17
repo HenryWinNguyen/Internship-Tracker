@@ -1,7 +1,10 @@
 # Internship-Tracker
+
 A Next.js app to track internship applications and auto-categorize them (free local modes or optional OpenAI).
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------------------------------------
 **Features**
+
 Add, edit, and delete internship applications
 Category → Subcategory badges on each card
 Filters: Status, Category, Subcategory + sorting
@@ -17,7 +20,8 @@ Next.js (App Router) + TypeScript
 Tailwind CSS
 Local Persistance with localStorage
 API route: app/api/classify/route.ts
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 **START**
 # 1) Install
@@ -39,7 +43,7 @@ USE_RULES=false
 OPENAI_API_KEY=sk-...your-key...
 
 Restart npm run dev after changing env values.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
 **How It Works**
 
 The UI posts { title, description, major } to /api/classify.
@@ -47,7 +51,7 @@ The UI posts { title, description, major } to /api/classify.
 The API route picks a mode based on env:
 
 MOCK: returns a constant label (great for screenshots and demos).
-![Uploading Screenshot 2025-08-17 at 2.06.40 PM.png…]()
+
 
 RULES: simple keyword matcher (no external calls).
 
