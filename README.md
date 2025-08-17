@@ -1,25 +1,18 @@
 # Internship-Tracker
 
-A Next.js app to track internship applications and auto-categorize them (free local modes or optional OpenAI).
+A simple web app built with Next.js, TypeScript, and TailwindCSS to help track internship applications.
+The app supports sorting, filtering, and optional AI-powered categorization of applications.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 **Features**
 
 Add, edit, and delete internship applications
-Category → Subcategory badges on each card
-Filters: Status, Category, Subcategory + sorting
-Persistent storage (localStorage) — no backend DB required
-Optional application link button per entry
-Dark/light toggle
-Pluggable AI backend with three modes:
-MOCK – fixed result for UI demos (free)
-RULES – lightweight keyword classifier (free)
-OPENAI – real model classification via OpenAI API (paid/optional)
-Tech Stack
-Next.js (App Router) + TypeScript
-Tailwind CSS
-Local Persistance with localStorage
-API route: app/api/classify/route.ts
+Track application status (Applied, Interviewing, Rejected)
+Sort by date (newest/oldest first)
+Filter by status, category, and subcategory
+Dark / light mode toggle
+Local storage persistence (data stays even after refresh)
+(Optional) AI-powered categorization with OpenAI API
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -47,17 +40,21 @@ Restart npm run dev after changing env values.
 **How It Works**
 
 The UI posts { title, description, major } to /api/classify.
-
 The API route picks a mode based on env:
-
 MOCK: returns a constant label (great for screenshots and demos).
-
-
 RULES: simple keyword matcher (no external calls).
-
 OPENAI: calls OpenAI (gpt-4o-mini) and returns compact JSON.
-
 The result (category, subcategory, confidence) is saved with the application and shown on the card.
 
 <img width="1440" height="816" alt="Screenshot 2025-08-17 at 2 06 56 PM" src="https://github.com/user-attachments/assets/5e957127-d8cd-48bf-98f4-3bd514e6a13a" />
 
+---------------------------------------------------------------------------------------------------------------------------------------------
+**Why This Project**
+
+Project highlights my skills in:
+
+Frontend development with Next.js & TypeScript
+State management with React hooks
+Data persistence using local storage
+Clean UI with TailwindCSS
+Optional AI integration via API
