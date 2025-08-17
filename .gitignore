@@ -67,3 +67,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 >>>>>>> 1f52e33 (Organized project structure under src/app and moved assets to public)
+
+!.env.example
